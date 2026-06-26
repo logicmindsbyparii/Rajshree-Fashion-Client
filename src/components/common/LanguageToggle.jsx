@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Stack, Button } from '@mui/material';
 
 const getCookie = (name) => {
@@ -15,20 +15,44 @@ export default function LanguageToggle({
   isAdminPage = false 
 }) {
   const currentTrans = getCookie('googtrans');
-  const isHiActive = currentTrans.includes('/hi');
-  const isEnActive = !isHiActive;
+  const [activeLang, setActiveLang] = useState(currentTrans.includes('/hi') ? 'hi' : 'en');
+  
+  const isHiActive = activeLang === 'hi';
+  const isEnActive = activeLang === 'en';
 
   const toggleLanguage = (lng) => {
-    if ((lng === 'hi' && isHiActive) || (lng === 'en' && isEnActive)) return;
+    if (activeLang === lng) return;
     
+    // Optimistic UI update
+    setActiveLang(lng);
+    
+    // Set cookies for Google Translate manually
+    const domain = window.location.hostname;
     if (lng === 'en') {
       document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=${window.location.hostname}; path=/;`;
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=${domain}; path=/;`;
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=.${domain}; path=/;`;
     } else {
       document.cookie = `googtrans=/en/${lng}; path=/`;
-      document.cookie = `googtrans=/en/${lng}; domain=${window.location.hostname}; path=/`;
+      document.cookie = `googtrans=/en/${lng}; domain=${domain}; path=/`;
+      document.cookie = `googtrans=/en/${lng}; domain=.${domain}; path=/`;
     }
-    window.location.reload();
+
+    // Try to trigger the native Google Translate dropdown to translate instantly without reload
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lng === 'en' ? 'en' : lng;
+      select.dispatchEvent(new Event('change'));
+      
+      // Some versions of Google Translate use an empty string for the default language
+      if (lng === 'en' && select.value !== 'en') {
+        select.value = '';
+        select.dispatchEvent(new Event('change'));
+      }
+    } else {
+      // Fallback if the widget hasn't loaded properly
+      window.location.reload();
+    }
   };
 
   // Theme color logic configuration
