@@ -87,7 +87,8 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     fetchProducts();
     
-    const eventSource = new EventSource('/api/events');
+    const backendUrl = import.meta.env.VITE_API_URL || '';
+    const eventSource = new EventSource(`${backendUrl}/api/events`);
     eventSource.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'products_updated') {
