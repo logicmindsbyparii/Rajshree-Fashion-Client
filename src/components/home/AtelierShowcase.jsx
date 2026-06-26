@@ -184,12 +184,12 @@ export default function AtelierShowcase() {
                     transform: { xs: 'translateX(-50%)', md: 'translateX(-50%)' },
                     width: 18,
                     height: 18,
-                    bgcolor: index % 2 === 0 ? '#6B1D2A' : '#C9A96E',
+                    bgcolor: index % 2 === 0 ? '#0A3B24' : '#C9A96E',
                     borderRadius: '50%',
                     zIndex: 2,
                     scale: 0,
                     opacity: 0,
-                    boxShadow: `0 0 0 4px ${index % 2 === 0 ? 'rgba(107,29,42,0.15)' : 'rgba(201,169,110,0.2)'}`
+                    boxShadow: `0 0 0 4px ${index % 2 === 0 ? 'rgba(10,59,36,0.15)' : 'rgba(201,169,110,0.2)'}`
                   }}
                 />
 
@@ -211,7 +211,7 @@ export default function AtelierShowcase() {
                         '&:hover': {
                           borderColor: '#D4A574',
                           transform: 'translateY(-4px)',
-                          boxShadow: '0 12px 40px rgba(107,29,42,0.06)'
+                          boxShadow: '0 12px 40px rgba(10,59,36,0.06)'
                         }
                       }}
                     >
@@ -220,7 +220,7 @@ export default function AtelierShowcase() {
                           sx={{
                             fontFamily: '"Playfair Display", serif',
                             fontSize: '1.5rem',
-                            color: index % 2 === 0 ? '#6B1D2A' : '#C9A96E',
+                            color: index % 2 === 0 ? '#0A3B24' : '#C9A96E',
                             lineHeight: 1
                           }}
                         >
@@ -230,14 +230,14 @@ export default function AtelierShowcase() {
                           sx={{
                             px: 1.5,
                             py: 0.5,
-                            bgcolor: index % 2 === 0 ? 'rgba(107,29,42,0.06)' : 'rgba(201,169,110,0.1)',
+                            bgcolor: index % 2 === 0 ? 'rgba(10,59,36,0.06)' : 'rgba(201,169,110,0.1)',
                             borderRadius: '4px'
                           }}
                         >
                           <Typography
                             variant="caption"
                             sx={{
-                              color: index % 2 === 0 ? '#6B1D2A' : '#C9A96E',
+                              color: index % 2 === 0 ? '#0A3B24' : '#C9A96E',
                               fontSize: '0.5rem',
                               letterSpacing: '0.1em',
                               fontWeight: 500,
@@ -311,7 +311,7 @@ export default function AtelierShowcase() {
                 <Typography variant="caption" sx={{ color: '#6B6B6B', fontSize: '0.6rem', letterSpacing: '0.1em', display: 'block', mb: 0.3 }}>
                   TOTAL CRAFTSMANSHIP
                 </Typography>
-                <Typography sx={{ fontFamily: '"Playfair Display", serif', color: '#6B1D2A', fontSize: '1.5rem', fontWeight: 600 }}>
+                <Typography sx={{ fontFamily: '"Playfair Display", serif', color: '#0A3B24', fontSize: '1.5rem', fontWeight: 600 }}>
                   80+ Hours
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#6B6B6B', fontSize: '0.55rem', letterSpacing: '0.05em' }}>
@@ -323,7 +323,7 @@ export default function AtelierShowcase() {
                 <Typography variant="caption" sx={{ color: '#6B6B6B', fontSize: '0.6rem', letterSpacing: '0.1em', display: 'block', mb: 0.3 }}>
                   MASTER ARTISANS
                 </Typography>
-                <Typography sx={{ fontFamily: '"Playfair Display", serif', color: '#6B1D2A', fontSize: '1.5rem', fontWeight: 600 }}>
+                <Typography sx={{ fontFamily: '"Playfair Display", serif', color: '#0A3B24', fontSize: '1.5rem', fontWeight: 600 }}>
                   30+
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#6B6B6B', fontSize: '0.55rem', letterSpacing: '0.05em' }}>
@@ -335,7 +335,7 @@ export default function AtelierShowcase() {
                 <Typography variant="caption" sx={{ color: '#6B6B6B', fontSize: '0.6rem', letterSpacing: '0.1em', display: 'block', mb: 0.3 }}>
                   FABRICS SOURCED FROM
                 </Typography>
-                <Typography sx={{ fontFamily: '"Playfair Display", serif', color: '#6B1D2A', fontSize: '1.5rem', fontWeight: 600 }}>
+                <Typography sx={{ fontFamily: '"Playfair Display", serif', color: '#0A3B24', fontSize: '1.5rem', fontWeight: 600 }}>
                   6 Countries
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#6B6B6B', fontSize: '0.55rem', letterSpacing: '0.05em' }}>
@@ -349,12 +349,12 @@ export default function AtelierShowcase() {
                 variant="contained"
                 onClick={() => navigate('/shop')}
                 sx={{
-                  bgcolor: '#6B1D2A',
+                  bgcolor: '#0A3B24',
                   color: '#FFF8F0',
                   py: 1.8,
                   px: 5,
                   fontSize: '0.7rem',
-                  '&:hover': { bgcolor: '#3D0C11' }
+                  '&:hover': { bgcolor: '#062617' }
                 }}
               >
                 Explore the Collection

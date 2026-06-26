@@ -21,7 +21,7 @@ export default function CartPage() {
           <Button
             variant="contained"
             onClick={() => navigate('/shop')}
-            sx={{ bgcolor: '#6B1D2A', '&:hover': { bgcolor: '#3D0C11' }, py: 1.5, px: 4 }}
+            sx={{ bgcolor: '#0A3B24', '&:hover': { bgcolor: '#062617' }, py: 1.5, px: 4 }}
           >
             Continue Shopping
           </Button>
@@ -54,7 +54,7 @@ export default function CartPage() {
                       <Typography sx={{ px: 2, fontSize: '0.9rem' }}>{item.quantity}</Typography>
                       <IconButton onClick={() => updateQuantity(item.id, item.size, item.quantity + 1)} size="small"><AddIcon fontSize="small" /></IconButton>
                     </Box>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#6B1D2A' }}>
+                    <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0A3B24' }}>
                       ₹{(item.price * item.quantity).toLocaleString('en-IN')}
                     </Typography>
                   </Box>
@@ -77,13 +77,13 @@ export default function CartPage() {
               <Divider sx={{ my: 2 }} />
               <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 3 }}>
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>Total</Typography>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: '#6B1D2A' }}>₹{cartTotal.toLocaleString('en-IN')}</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#0A3B24' }}>₹{cartTotal.toLocaleString('en-IN')}</Typography>
               </Box>
               <Button
                 variant="contained"
                 fullWidth
                 onClick={() => navigate('/checkout')}
-                sx={{ bgcolor: '#6B1D2A', '&:hover': { bgcolor: '#3D0C11' }, py: 1.5 }}
+                sx={{ bgcolor: '#0A3B24', '&:hover': { bgcolor: '#062617' }, py: 1.5 }}
               >
                 Proceed to Checkout
               </Button>

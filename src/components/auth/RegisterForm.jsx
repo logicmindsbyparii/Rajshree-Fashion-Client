@@ -149,9 +149,9 @@ export default function RegisterForm() {
           mb: 3,
           fontSize: '0.7rem',
           letterSpacing: '0.15em',
-          bgcolor: '#6B1D2A',
-          '&:hover': { bgcolor: '#3D0C11' },
-          '&.Mui-disabled': { bgcolor: 'rgba(107,29,42,0.3)' }
+          bgcolor: '#0A3B24',
+          '&:hover': { bgcolor: '#062617' },
+          '&.Mui-disabled': { bgcolor: 'rgba(10,59,36,0.3)' }
         }}
       >
         {loading ? 'Creating Account...' : 'Create Account'}
@@ -164,7 +164,7 @@ export default function RegisterForm() {
             component={RouterLink}
             to="/login"
             sx={{
-              color: '#6B1D2A',
+              color: '#0A3B24',
               fontWeight: 500,
               textDecoration: 'none',
               '&:hover': { textDecoration: 'underline' }

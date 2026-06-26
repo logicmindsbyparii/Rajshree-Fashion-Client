@@ -27,7 +27,7 @@ export default function CheckoutPage() {
     return (
       <Box sx={{ pt: 20, pb: 10, minHeight: '80vh', bgcolor: '#FFF8F0', textAlign: 'center' }}>
         <Container maxWidth="sm">
-          <Typography variant="h3" sx={{ fontFamily: '"Playfair Display", serif', color: '#6B1D2A', mb: 3 }}>
+          <Typography variant="h3" sx={{ fontFamily: '"Playfair Display", serif', color: '#0A3B24', mb: 3 }}>
             Order Placed Successfully!
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
@@ -76,9 +76,9 @@ export default function CheckoutPage() {
                         value={paymentMethod}
                         onChange={(e) => setPaymentMethod(e.target.value)}
                       >
-                        <FormControlLabel value="razorpay" control={<Radio sx={{ color: '#C9A96E', '&.Mui-checked': { color: '#6B1D2A' } }} />} label="Razorpay" />
-                        <FormControlLabel value="stripe" control={<Radio sx={{ color: '#C9A96E', '&.Mui-checked': { color: '#6B1D2A' } }} />} label="Stripe" />
-                        <FormControlLabel value="cod" control={<Radio sx={{ color: '#C9A96E', '&.Mui-checked': { color: '#6B1D2A' } }} />} label="Cash on Delivery" />
+                        <FormControlLabel value="razorpay" control={<Radio sx={{ color: '#C9A96E', '&.Mui-checked': { color: '#0A3B24' } }} />} label="Razorpay" />
+                        <FormControlLabel value="stripe" control={<Radio sx={{ color: '#C9A96E', '&.Mui-checked': { color: '#0A3B24' } }} />} label="Stripe" />
+                        <FormControlLabel value="cod" control={<Radio sx={{ color: '#C9A96E', '&.Mui-checked': { color: '#0A3B24' } }} />} label="Cash on Delivery" />
                       </RadioGroup>
                     </FormControl>
                   </Grid>
@@ -87,7 +87,7 @@ export default function CheckoutPage() {
                       type="submit"
                       variant="contained"
                       fullWidth
-                      sx={{ bgcolor: '#6B1D2A', '&:hover': { bgcolor: '#3D0C11' }, py: 1.5, mt: 2 }}
+                      sx={{ bgcolor: '#0A3B24', '&:hover': { bgcolor: '#062617' }, py: 1.5, mt: 2 }}
                     >
                       Place Order (₹{cartTotal.toLocaleString('en-IN')})
                     </Button>
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
               <Box sx={{ my: 2, borderBottom: '1px solid #E8DDD0' }} />
               <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>Total</Typography>
-                <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#6B1D2A' }}>₹{cartTotal.toLocaleString('en-IN')}</Typography>
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, color: '#0A3B24' }}>₹{cartTotal.toLocaleString('en-IN')}</Typography>
               </Box>
             </Paper>
           </Grid>

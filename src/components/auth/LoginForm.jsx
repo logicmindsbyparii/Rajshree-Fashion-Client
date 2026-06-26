@@ -15,6 +15,7 @@ export default function LoginForm() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [resetSent, setResetSent] = useState(false);
   const [errors, setErrors] = useState({});
 
   const validate = () => {
@@ -39,7 +40,7 @@ export default function LoginForm() {
     setLoading(true);
     try {
       const userData = await login(formData.email, formData.password);
-      navigate(userData.role === 'admin' ? '/admin' : '/shop');
+      navigate(userData.role === 'admin' ? '/secret-admin-rajshree' : '/shop');
     } catch {
       // Error is already set in AuthContext
     } finally {
@@ -67,6 +68,12 @@ export default function LoginForm() {
       {error && (
         <Alert severity="error" sx={{ mb: 3, borderRadius: 0, fontSize: '0.8rem' }}>
           {error}
+        </Alert>
+      )}
+
+      {resetSent && (
+        <Alert severity="success" sx={{ mb: 3, borderRadius: 0, fontSize: '0.8rem' }}>
+          Password reset link has been sent to your email! (Please contact your administrator if not received).
         </Alert>
       )}
 
@@ -110,6 +117,29 @@ export default function LoginForm() {
         }}
       />
 
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 3, mt: -2 }}>
+        <Button 
+          onClick={() => {
+            if (!formData.email) {
+              setErrors({ email: 'Please enter your email first to reset password' });
+              return;
+            }
+            setResetSent(true);
+            setErrors({});
+          }} 
+          sx={{ 
+            fontSize: '0.7rem', 
+            textTransform: 'none', 
+            color: '#6B6B6B', 
+            p: 0, 
+            minWidth: 0,
+            '&:hover': { color: '#0A3B24', bgcolor: 'transparent', textDecoration: 'underline' } 
+          }}
+        >
+          Forgot password?
+        </Button>
+      </Box>
+
       <Button
         type="submit"
         fullWidth
@@ -121,31 +151,13 @@ export default function LoginForm() {
           mb: 3,
           fontSize: '0.7rem',
           letterSpacing: '0.15em',
-          bgcolor: '#6B1D2A',
-          '&:hover': { bgcolor: '#3D0C11' },
-          '&.Mui-disabled': { bgcolor: 'rgba(107,29,42,0.3)' }
+          bgcolor: '#0A3B24',
+          '&:hover': { bgcolor: '#062617' },
+          '&.Mui-disabled': { bgcolor: 'rgba(10,59,36,0.3)' }
         }}
       >
         {loading ? 'Signing In...' : 'Sign In'}
       </Button>
-
-      <Box sx={{ textAlign: 'center' }}>
-        <Typography variant="body2" sx={{ color: '#6B6B6B', fontSize: '0.8rem' }}>
-          Don't have an account?{' '}
-          <Link
-            component={RouterLink}
-            to="/register"
-            sx={{
-              color: '#6B1D2A',
-              fontWeight: 500,
-              textDecoration: 'none',
-              '&:hover': { textDecoration: 'underline' }
-            }}
-          >
-            Create Account
-          </Link>
-        </Typography>
-      </Box>
     </Box>
   );
 }

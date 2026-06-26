@@ -82,14 +82,14 @@ export default function LuxuryLoadingScreen() {
         variant="h2"
         sx={{
           fontFamily: '"Playfair Display", serif',
-          color: '#6B1D2A',
+          color: '#0A3B24',
           fontWeight: 600,
           letterSpacing: '0.05em'
         }}
       >
         Rajshree
       </Typography>
-      <Box sx={{ width: 40, height: 40, border: '2px solid #E8DDD0', borderTop: '2px solid #6B1D2A', animation: 'spin 1s linear infinite' }} />
+      <Box sx={{ width: 40, height: 40, border: '2px solid #E8DDD0', borderTop: '2px solid #0A3B24', animation: 'spin 1s linear infinite' }} />
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </Box>
   );

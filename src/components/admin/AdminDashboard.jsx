@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import { Box, Container, Typography, Grid, Paper } from '@mui/material';
+import { Box, Container, Typography, Grid, Paper, Button } from '@mui/material';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import WarningIcon from '@mui/icons-material/Warning';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { useProducts } from '../../context/ProductContext';
 import { useAuth } from '../../context/AuthContext';
 import ProductForm from './ProductForm';
 import InventoryTable from './InventoryTable';
+import LanguageToggle from '../common/LanguageToggle';
 
 export default function AdminDashboard() {
   const { products } = useProducts();
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const [editProduct, setEditProduct] = useState(null);
 
   const totalProducts = products.length;
@@ -24,8 +26,8 @@ export default function AdminDashboard() {
       label: 'Total Products',
       value: totalProducts,
       icon: InventoryIcon,
-      color: '#6B1D2A',
-      bgColor: 'rgba(107,29,42,0.06)'
+      color: '#0A3B24',
+      bgColor: 'rgba(10,59,36,0.06)'
     },
     {
       label: 'In Stock',
@@ -54,27 +56,51 @@ export default function AdminDashboard() {
     <Box sx={{ py: { xs: 4, md: 6 }, bgcolor: '#FFF8F0', minHeight: '100vh', pt: { xs: 10, md: 12 } }}>
       <Container maxWidth="xl">
         {/* Header */}
-        <Box sx={{ mb: 5 }}>
-          <Typography
-            variant="subtitle2"
-            sx={{ color: '#C9A96E', mb: 1, fontSize: '0.6rem', letterSpacing: '0.2em' }}
-          >
-            ADMIN PORTAL
-          </Typography>
-          <Typography
-            variant="h3"
-            sx={{
-              fontFamily: '"Playfair Display", serif',
-              color: '#1A1A1A',
-              fontSize: { xs: '1.6rem', md: '2rem' },
-              mb: 0.5
-            }}
-          >
-            Inventory Management
-          </Typography>
-          <Typography variant="body2" sx={{ color: '#6B6B6B', fontSize: '0.85rem' }}>
-            Welcome back, {user?.name || 'Admin'}
-          </Typography>
+        <Box sx={{ mb: 5, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 2 }}>
+          <Box>
+            <Typography
+              variant="subtitle2"
+              sx={{ color: '#C9A96E', mb: 1, fontSize: '0.6rem', letterSpacing: '0.2em' }}
+            >
+              ADMIN PORTAL
+            </Typography>
+            <Typography
+              variant="h3"
+              sx={{
+                fontFamily: '"Playfair Display", serif',
+                color: '#1A1A1A',
+                fontSize: { xs: '1.6rem', md: '2rem' },
+                mb: 0.5
+              }}
+            >
+              Inventory Management
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#6B6B6B', fontSize: '0.85rem' }}>
+              Welcome back, {user?.name || 'Admin'}
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+            <LanguageToggle isAdminPage={true} />
+            <Button
+              variant="outlined"
+              onClick={logout}
+              startIcon={<LogoutIcon />}
+              sx={{
+                color: '#0A3B24',
+                borderColor: '#0A3B24',
+                fontSize: '0.7rem',
+                letterSpacing: '0.1em',
+                px: 3,
+                '&:hover': {
+                  bgcolor: 'rgba(10,59,36,0.05)',
+                  borderColor: '#062617'
+                }
+              }}
+            >
+              Sign Out
+            </Button>
+          </Box>
         </Box>
 
         {/* Stats Cards */}

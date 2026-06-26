@@ -9,8 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <title>Rajshree Fashion - Luxury Handcrafted Suits</title>
+    <style>
+      /* Hide Google Translate Default UI completely without breaking initialization */
+      #google_translate_element { width: 0; height: 0; overflow: hidden; position: absolute; z-index: -1; }
+      .goog-te-banner-frame { display: none !important; }
+      .goog-te-banner-frame.skiptranslate { display: none !important; }
+      .skiptranslate iframe { display: none !important; }
+      body { top: 0px !important; position: relative !important; margin-top: 0px !important; }
+      html { top: 0px !important; }
+      .goog-tooltip { display: none !important; }
+      .goog-tooltip:hover { display: none !important; }
+      .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+    </style>
   </head>
   <body>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

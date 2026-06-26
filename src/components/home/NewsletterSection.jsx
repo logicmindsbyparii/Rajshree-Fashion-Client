@@ -31,7 +31,7 @@ export default function NewsletterSection() {
   }, []);
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#1A0A0E', position: 'relative', overflow: 'hidden' }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#05100B', position: 'relative', overflow: 'hidden' }}>
       {/* Subtle pattern overlay */}
       <Box sx={{
         position: 'absolute',

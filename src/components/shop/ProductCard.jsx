@@ -83,7 +83,7 @@ export default function ProductCard({ product }) {
           transition: 'box-shadow 0.5s, transform 0.5s',
           boxShadow: '0 1px 8px rgba(0,0,0,0.04)',
           '&:hover': {
-            boxShadow: '0 12px 40px rgba(107,29,42,0.12), 0 2px 12px rgba(0,0,0,0.05)',
+            boxShadow: '0 12px 40px rgba(10,59,36,0.12), 0 2px 12px rgba(0,0,0,0.05)',
             transform: 'translateY(-4px)'
           }
         }}
@@ -200,7 +200,7 @@ export default function ProductCard({ product }) {
               fontFamily: '"Inter", sans-serif',
               fontSize: { xs: '1rem', md: '1.1rem' },
               fontWeight: 500,
-              color: '#6B1D2A',
+              color: '#0A3B24',
               letterSpacing: '0.02em'
             }}
           >
@@ -281,7 +281,7 @@ export default function ProductCard({ product }) {
               <Typography
                 variant="caption"
                 sx={{
-                  color: '#6B1D2A',
+                  color: '#0A3B24',
                   fontSize: '0.55rem',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
@@ -296,7 +296,7 @@ export default function ProductCard({ product }) {
                   display: 'inline-block',
                   transition: 'transform 0.3s',
                   fontSize: '0.65rem',
-                  color: '#6B1D2A',
+                  color: '#0A3B24',
                   '.MuiBox-root:hover &': { transform: 'translateX(3px)' }
                 }}
               >

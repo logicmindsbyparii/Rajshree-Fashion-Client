@@ -12,6 +12,7 @@ import ShopPage from './pages/ShopPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AdminPage from './pages/AdminPage';
+import './i18n';
 
 export default function App() {
   return (

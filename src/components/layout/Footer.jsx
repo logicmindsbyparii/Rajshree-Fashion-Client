@@ -10,7 +10,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        background: 'radial-gradient(ellipse at bottom, #3D121B 0%, #1A0A0E 100%)',
+        background: 'radial-gradient(ellipse at bottom, #082015 0%, #05100B 100%)',
         color: '#FFF8F0',
         pt: { xs: 8, md: 12 },
         pb: 4,

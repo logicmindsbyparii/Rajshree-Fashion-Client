@@ -75,7 +75,7 @@ export default function InventoryTable({ onEdit }) {
               <TableRow
                 key={product.id}
                 sx={{
-                  '&:hover': { bgcolor: 'rgba(107,29,42,0.02)' },
+                  '&:hover': { bgcolor: 'rgba(10,59,36,0.02)' },
                   transition: 'background 0.2s'
                 }}
               >
@@ -145,7 +145,7 @@ export default function InventoryTable({ onEdit }) {
                   <IconButton
                     size="small"
                     onClick={() => onEdit(product)}
-                    sx={{ color: '#6B6B6B', '&:hover': { color: '#6B1D2A' } }}
+                    sx={{ color: '#6B6B6B', '&:hover': { color: '#0A3B24' } }}
                   >
                     <EditIcon fontSize="small" />
                   </IconButton>

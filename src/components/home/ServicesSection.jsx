@@ -13,7 +13,7 @@ const services = [
     title: 'Bespoke Design',
     subtitle: 'Completely custom suits',
     description: 'From initial consultation to final fitting, our master artisans create a suit uniquely yours. Choose from over 500 fabrics and define every detail — from neck design to border work.',
-    color: '#6B1D2A'
+    color: '#0A3B24'
   },
   {
     icon: StraightenIcon,
@@ -27,7 +27,7 @@ const services = [
     title: 'Alterations & Restoration',
     subtitle: 'Preserving your investment',
     description: 'Extend the life of your cherished suits with our expert alteration and restoration services. From resizing to reweaving, our artisans treat every piece with the same care as a new creation.',
-    color: '#6B1D2A'
+    color: '#0A3B24'
   },
   {
     icon: DiamondIcon,
@@ -94,7 +94,7 @@ export default function ServicesSection() {
                     '&:hover': {
                       borderColor: '#D4A574',
                       transform: 'translateY(-4px)',
-                      boxShadow: '0 12px 40px rgba(107,29,42,0.06)'
+                      boxShadow: '0 12px 40px rgba(10,59,36,0.06)'
                     }
                   }}
                 >
@@ -107,12 +107,12 @@ export default function ServicesSection() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      bgcolor: service.color === '#6B1D2A' ? 'rgba(107,29,42,0.08)' : 'rgba(201,169,110,0.12)',
+                      bgcolor: service.color === '#0A3B24' ? 'rgba(10,59,36,0.08)' : 'rgba(201,169,110,0.12)',
                       borderRadius: '8px',
                       transition: 'all 0.4s',
                       '.MuiBox-root:hover &': {
                         transform: 'scale(1.05)',
-                        bgcolor: service.color === '#6B1D2A' ? 'rgba(107,29,42,0.12)' : 'rgba(201,169,110,0.16)'
+                        bgcolor: service.color === '#0A3B24' ? 'rgba(10,59,36,0.12)' : 'rgba(201,169,110,0.16)'
                       }
                     }}
                   >
@@ -170,12 +170,12 @@ export default function ServicesSection() {
               variant="contained"
               onClick={() => navigate('/shop')}
               sx={{
-                bgcolor: '#6B1D2A',
+                bgcolor: '#0A3B24',
                 color: '#FFF8F0',
                 py: 1.8,
                 px: 5,
                 fontSize: '0.7rem',
-                '&:hover': { bgcolor: '#3D0C11' }
+                '&:hover': { bgcolor: '#062617' }
               }}
             >
               Book a Consultation

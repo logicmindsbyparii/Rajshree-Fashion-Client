@@ -91,7 +91,7 @@ export default function ProductForm({ editProduct, onCancel }) {
 
   const removeImage = () => {
     setImage(null);
-    setImagePreview(editProduct?.image_url || null);
+    setImagePreview(null);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -317,9 +317,9 @@ export default function ProductForm({ editProduct, onCancel }) {
                 px: 4,
                 fontSize: '0.65rem',
                 letterSpacing: '0.12em',
-                bgcolor: '#6B1D2A',
-                '&:hover': { bgcolor: '#3D0C11' },
-                '&.Mui-disabled': { bgcolor: 'rgba(107,29,42,0.3)' }
+                bgcolor: '#0A3B24',
+                '&:hover': { bgcolor: '#062617' },
+                '&.Mui-disabled': { bgcolor: 'rgba(10,59,36,0.3)' }
               }}
             >
               {loading ? 'Saving...' : isEditing ? 'Update Product' : 'Add Product'}

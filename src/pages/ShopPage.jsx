@@ -90,14 +90,14 @@ export default function ShopPage() {
                   variant="caption"
                   onClick={() => setActiveFilters({})}
                   sx={{
-                    color: '#6B1D2A',
+                    color: '#0A3B24',
                     fontSize: '0.6rem',
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
                     cursor: 'pointer',
                     fontWeight: 500,
                     transition: 'color 0.3s',
-                    '&:hover': { color: '#3D0C11' }
+                    '&:hover': { color: '#062617' }
                   }}
                 >
                   Clear All

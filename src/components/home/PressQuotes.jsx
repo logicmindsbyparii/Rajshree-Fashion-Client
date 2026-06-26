@@ -117,7 +117,7 @@ export default function PressQuotes() {
                     '&:hover': {
                       borderColor: '#D4A574',
                       transform: 'translateY(-4px)',
-                      boxShadow: '0 12px 40px rgba(107,29,42,0.06)'
+                      boxShadow: '0 12px 40px rgba(10,59,36,0.06)'
                     }
                   }}
                 >
@@ -152,7 +152,7 @@ export default function PressQuotes() {
                     <Typography
                       variant="subtitle2"
                       sx={{
-                        color: '#6B1D2A',
+                        color: '#0A3B24',
                         fontSize: '0.7rem',
                         letterSpacing: '0.12em',
                         fontWeight: 600

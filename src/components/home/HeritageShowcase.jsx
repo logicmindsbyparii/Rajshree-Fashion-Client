@@ -12,7 +12,7 @@ const heritageItems = [
     title: 'Premium Fabrics',
     subtitle: 'Sourced from the world\'s finest mills',
     description: 'We source our fabrics from legendary mills across Italy, England, and Scotland. From Super 200s wool to pure cashmere and silk blends, each bolt is hand-selected for quality, drape, and longevity.',
-    color: '#6B1D2A',
+    color: '#0A3B24',
     number: '01'
   },
   {
@@ -26,7 +26,7 @@ const heritageItems = [
     title: 'Heritage Cuts',
     subtitle: 'Timeless silhouettes, modern sensibilities',
     description: 'Our patterns are built on archival blocks refined over 25 years. We marry classic construction techniques with contemporary proportions for a silhouette that is both timeless and distinctly modern.',
-    color: '#6B1D2A',
+    color: '#0A3B24',
     number: '03'
   }
 ];
@@ -78,7 +78,7 @@ export default function HeritageShowcase() {
           right: 0,
           bottom: 0,
           opacity: 0.03,
-          backgroundImage: 'radial-gradient(#6B1D2A 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#0A3B24 1px, transparent 1px)',
           backgroundSize: '40px 40px',
           pointerEvents: 'none'
         }}
@@ -145,7 +145,7 @@ export default function HeritageShowcase() {
                     '&:hover': {
                       borderColor: '#D4A574',
                       transform: 'translateY(-6px)',
-                      boxShadow: '0 16px 48px rgba(107,29,42,0.08)'
+                      boxShadow: '0 16px 48px rgba(10,59,36,0.08)'
                     },
                     '&::before': {
                       content: '""',
@@ -185,7 +185,7 @@ export default function HeritageShowcase() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      bgcolor: item.color === '#6B1D2A' ? 'rgba(107,29,42,0.08)' : 'rgba(201,169,110,0.12)',
+                      bgcolor: item.color === '#0A3B24' ? 'rgba(10,59,36,0.08)' : 'rgba(201,169,110,0.12)',
                       mb: 2.5,
                       position: 'relative',
                       zIndex: 1
@@ -276,10 +276,10 @@ export default function HeritageShowcase() {
                   textAlign: 'center',
                   py: { xs: 3.5, md: 5 },
                   px: 2,
-                  bgcolor: stat.accent ? 'rgba(107,29,42,0.02)' : '#FFF8F0',
+                  bgcolor: stat.accent ? 'rgba(10,59,36,0.02)' : '#FFF8F0',
                   transition: 'background 0.3s',
                   '&:hover': {
-                    bgcolor: stat.accent ? 'rgba(107,29,42,0.04)' : 'rgba(253,248,243,0.8)'
+                    bgcolor: stat.accent ? 'rgba(10,59,36,0.04)' : 'rgba(253,248,243,0.8)'
                   }
                 }}
               >
@@ -287,7 +287,7 @@ export default function HeritageShowcase() {
                   variant="h3"
                   sx={{
                     fontFamily: '"Playfair Display", serif',
-                    color: stat.accent ? '#C9A96E' : '#6B1D2A',
+                    color: stat.accent ? '#C9A96E' : '#0A3B24',
                     fontSize: { xs: '2rem', md: '2.5rem' },
                     fontWeight: 600,
                     mb: 0.5

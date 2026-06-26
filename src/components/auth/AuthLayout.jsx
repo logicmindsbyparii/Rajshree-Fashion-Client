@@ -42,7 +42,7 @@ export default function AuthLayout({ children, title, subtitle }) {
         sx={{
           display: { xs: 'none', md: 'flex' },
           width: '45%',
-          bgcolor: '#1A0A0E',
+          bgcolor: '#05100B',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
@@ -56,7 +56,7 @@ export default function AuthLayout({ children, title, subtitle }) {
             right: 0,
             bottom: 0,
             background: `
-              radial-gradient(ellipse at 30% 50%, rgba(107,29,42,0.4) 0%, transparent 60%),
+              radial-gradient(ellipse at 30% 50%, rgba(10,59,36,0.4) 0%, transparent 60%),
               radial-gradient(ellipse at 70% 20%, rgba(201,169,110,0.06) 0%, transparent 40%)
             `
           }
@@ -172,7 +172,7 @@ export default function AuthLayout({ children, title, subtitle }) {
               variant="h4"
               sx={{
                 fontFamily: '"Playfair Display", serif',
-                color: '#6B1D2A',
+                color: '#0A3B24',
                 fontWeight: 600,
                 cursor: 'pointer',
                 '& span': {

@@ -8,10 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Using standard YouTube Shorts video IDs for fashion content
 const videos = [
-  { id: '1sX4hJmYc7c', title: 'Rajshree Fashion Surat 1' },
-  { id: 'dQw4w9WgXcQ', title: 'Rajshree Fashion Surat 2' },
-  { id: 'y6120QOlsfU', title: 'Rajshree Fashion Surat 3' },
-  { id: '3JZ_D3ELwOQ', title: 'Rajshree Fashion Surat 4' }
+  { id: 'tABNKLlo4rs', title: 'Rajshree Fashion Surat 1' },
+  { id: 'u-FtKBBPp5g', title: 'Rajshree Fashion Surat 2' },
+  { id: 'souDEe_13UM', title: 'Rajshree Fashion Surat 3' },
+  { id: 'LAPJW9W6qTI', title: 'Rajshree Fashion Surat 4' }
 ];
 
 export default function VideoSection() {
@@ -80,28 +80,29 @@ export default function VideoSection() {
                 <Box
                   sx={{
                     width: '100%',
-                    aspectRatio: '1/1',
+                    aspectRatio: '9/16',
                     borderRadius: '24px',
                     overflow: 'hidden',
                     position: 'relative',
-                    boxShadow: '0 12px 32px rgba(107,29,42,0.1)',
+                    boxShadow: '0 12px 32px rgba(10,59,36,0.1)',
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'translateY(-8px)',
-                      boxShadow: '0 16px 40px rgba(107,29,42,0.15)'
+                      boxShadow: '0 16px 40px rgba(10,59,36,0.15)'
                     }
                   }}
                 >
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${video.id}?autoplay=0&controls=1&rel=0`}
-                    title={video.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ objectFit: 'cover' }}
-                  ></iframe>
+                <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${video.id}?playsinline=1&rel=0&modestbranding=1`}
+                title={video.title}
+                frameBorder="0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                />
                 </Box>
               </Grid>
             ))}

@@ -38,12 +38,12 @@ export default function Filters({ fabricTypes, collections, activeFilters, onFil
         letterSpacing: '0.05em',
         height: 32,
         fontWeight: selected ? 500 : 400,
-        bgcolor: selected ? '#6B1D2A' : 'transparent',
+        bgcolor: selected ? '#0A3B24' : 'transparent',
         color: selected ? '#FFF8F0' : '#1A1A1A',
-        borderColor: selected ? '#6B1D2A' : '#D4A574',
+        borderColor: selected ? '#0A3B24' : '#D4A574',
         '&:hover': {
-          bgcolor: selected ? '#3D0C11' : 'rgba(107,29,42,0.04)',
-          borderColor: '#6B1D2A'
+          bgcolor: selected ? '#062617' : 'rgba(10,59,36,0.04)',
+          borderColor: '#0A3B24'
         },
         '& .MuiChip-label': { px: 1.5 },
         transition: 'all 0.25s ease'
@@ -134,10 +134,10 @@ export default function Filters({ fabricTypes, collections, activeFilters, onFil
               fontFamily: '"Inter", sans-serif',
               fontSize: '0.6rem',
               letterSpacing: '0.08em',
-              color: '#6B1D2A',
-              borderColor: '#6B1D2A',
+              color: '#0A3B24',
+              borderColor: '#0A3B24',
               height: 32,
-              '&:hover': { bgcolor: 'rgba(107,29,42,0.04)' }
+              '&:hover': { bgcolor: 'rgba(10,59,36,0.04)' }
             }}
           />
         </Box>
@@ -175,7 +175,7 @@ export default function Filters({ fabricTypes, collections, activeFilters, onFil
             >
               Filters
               {hasActiveFilters && (
-                <Box component="span" sx={{ ml: 1, color: '#6B1D2A', fontWeight: 600 }}>
+                <Box component="span" sx={{ ml: 1, color: '#0A3B24', fontWeight: 600 }}>
                   ({Object.keys(activeFilters).length})
                 </Box>
               )}

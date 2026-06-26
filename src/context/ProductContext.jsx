@@ -18,6 +18,8 @@ export function ProductProvider({ children }) {
       if (filters.collection) params.append('collection', filters.collection);
       if (filters.availability) params.append('availability', filters.availability);
 
+      params.append('_t', Date.now()); // Prevent aggressive browser caching
+
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await axios.get(`/api/products${query}`);
       setProducts(res.data.products);
@@ -85,7 +87,7 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     fetchProducts();
     
-    const eventSource = new EventSource('http://localhost:5000/api/events');
+    const eventSource = new EventSource('/api/events');
     eventSource.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'products_updated') {

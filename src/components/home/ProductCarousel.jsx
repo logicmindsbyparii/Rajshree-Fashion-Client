@@ -204,10 +204,10 @@ export default function ProductCarousel() {
                     width: currentIndex === i ? 32 : 8,
                     height: 8,
                     borderRadius: currentIndex === i ? '4px' : '50%',
-                    bgcolor: currentIndex === i ? '#6B1D2A' : '#D4C5B0',
+                    bgcolor: currentIndex === i ? '#0A3B24' : '#D4C5B0',
                     cursor: 'pointer',
                     transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                    '&:hover': { bgcolor: currentIndex === i ? '#6B1D2A' : '#C9A96E' }
+                    '&:hover': { bgcolor: currentIndex === i ? '#0A3B24' : '#C9A96E' }
                   }}
                 />
               ))}

@@ -5,9 +5,9 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 const rawTheme = createTheme({
   palette: {
     primary: {
-      main: '#6B1D2A',       // Deep Burgundy
-      light: '#8B3A47',
-      dark: '#3D0C11',       // Dark Walnut
+      main: '#0A3B24',       // Deep Burgundy
+      light: '#1A5A3B',
+      dark: '#062617',       // Dark Walnut
       contrastText: '#FFF8F0'
     },
     secondary: {
@@ -160,24 +160,24 @@ const rawTheme = createTheme({
           }
         },
         containedPrimary: {
-          backgroundColor: '#6B1D2A',
-          boxShadow: '0 2px 12px rgba(107,29,42,0.15)',
+          backgroundColor: '#0A3B24',
+          boxShadow: '0 2px 12px rgba(10,59,36,0.15)',
           '&:hover': {
-            backgroundColor: '#3D0C11',
-            boxShadow: '0 8px 28px rgba(107,29,42,0.3)'
+            backgroundColor: '#062617',
+            boxShadow: '0 8px 28px rgba(10,59,36,0.3)'
           }
         },
         outlinedPrimary: {
-          borderColor: '#6B1D2A',
+          borderColor: '#0A3B24',
           borderWidth: '1.5px',
           '&:hover': {
             borderWidth: '1.5px',
-            backgroundColor: 'rgba(107,29,42,0.04)'
+            backgroundColor: 'rgba(10,59,36,0.04)'
           }
         },
         textPrimary: {
           '&:hover': {
-            backgroundColor: 'rgba(107,29,42,0.04)'
+            backgroundColor: 'rgba(10,59,36,0.04)'
           }
         },
         sizeSmall: {
@@ -196,7 +196,7 @@ const rawTheme = createTheme({
           transition: 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
           '&:hover': {
             borderColor: '#D4A574',
-            boxShadow: '0 12px 40px rgba(107,29,42,0.08)'
+            boxShadow: '0 12px 40px rgba(10,59,36,0.08)'
           }
         }
       }
@@ -238,7 +238,7 @@ const rawTheme = createTheme({
               borderColor: '#D4A574'
             },
             '&.Mui-focused fieldset': {
-              borderColor: '#6B1D2A',
+              borderColor: '#0A3B24',
               borderWidth: 1.5
             },
             '& .MuiOutlinedInput-input': {
@@ -250,7 +250,7 @@ const rawTheme = createTheme({
             letterSpacing: '0.04em',
             color: '#6B6B6B',
             '&.Mui-focused': {
-              color: '#6B1D2A'
+              color: '#0A3B24'
             }
           },
           '& .MuiFormHelperText-root': {
@@ -296,7 +296,7 @@ const rawTheme = createTheme({
           }
         },
         filled: {
-          backgroundColor: '#6B1D2A',
+          backgroundColor: '#0A3B24',
           color: '#FFF8F0'
         },
         sizeSmall: {
@@ -323,9 +323,9 @@ const rawTheme = createTheme({
             textTransform: 'uppercase',
             fontSize: '0.6rem',
             color: '#6B6B6B',
-            borderBottom: '2px solid #6B1D2A',
+            borderBottom: '2px solid #0A3B24',
             padding: '16px 20px',
-            backgroundColor: 'rgba(107,29,42,0.02)'
+            backgroundColor: 'rgba(10,59,36,0.02)'
           }
         }
       }
@@ -402,12 +402,12 @@ const rawTheme = createTheme({
           fontFamily: '"Inter", sans-serif',
           fontSize: '0.85rem',
           '&:hover': {
-            backgroundColor: 'rgba(107,29,42,0.04)'
+            backgroundColor: 'rgba(10,59,36,0.04)'
           },
           '&.Mui-selected': {
-            backgroundColor: 'rgba(107,29,42,0.08)',
+            backgroundColor: 'rgba(10,59,36,0.08)',
             '&:hover': {
-              backgroundColor: 'rgba(107,29,42,0.12)'
+              backgroundColor: 'rgba(10,59,36,0.12)'
             }
           }
         }
@@ -419,7 +419,7 @@ const rawTheme = createTheme({
           borderRadius: '6px',
           fontFamily: '"Inter", sans-serif',
           fontSize: '0.7rem',
-          backgroundColor: '#3D0C11',
+          backgroundColor: '#062617',
           padding: '8px 14px'
         }
       }

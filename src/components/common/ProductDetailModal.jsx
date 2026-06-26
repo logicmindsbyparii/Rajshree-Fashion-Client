@@ -261,7 +261,7 @@ export default function ProductDetailModal({ product, open, onClose }) {
                 variant="h4"
                 sx={{
                   fontFamily: '"Inter", sans-serif',
-                  color: '#6B1D2A',
+                  color: '#0A3B24',
                   fontSize: { xs: '1.3rem', md: '1.6rem' },
                   fontWeight: 500,
                   mb: 2,
@@ -418,7 +418,7 @@ export default function ProductDetailModal({ product, open, onClose }) {
                   borderRadius: '8px',
                   whiteSpace: 'normal',
                   lineHeight: 1.2,
-                  '&:hover': { borderColor: '#6B1D2A', color: '#6B1D2A', bgcolor: 'transparent' }
+                  '&:hover': { borderColor: '#0A3B24', color: '#0A3B24', bgcolor: 'transparent' }
                 }}
               >
                 Continue Browsing

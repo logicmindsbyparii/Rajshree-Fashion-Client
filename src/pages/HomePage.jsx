@@ -86,7 +86,7 @@ export default function HomePage() {
                       '&:hover': {
                         borderColor: '#D4A574',
                         transform: 'translateY(-6px)',
-                        boxShadow: '0 12px 40px rgba(107,29,42,0.06)'
+                        boxShadow: '0 12px 40px rgba(10,59,36,0.06)'
                       }
                     }}
                   >
@@ -97,18 +97,18 @@ export default function HomePage() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        bgcolor: 'rgba(107,29,42,0.06)',
+                        bgcolor: 'rgba(10,59,36,0.06)',
                         mx: 'auto',
                         mb: 3,
                         borderRadius: '12px',
                         transition: 'all 0.4s',
                         '.MuiBox-root:hover &': {
-                          bgcolor: 'rgba(107,29,42,0.1)',
+                          bgcolor: 'rgba(10,59,36,0.1)',
                           transform: 'scale(1.05)'
                         }
                       }}
                     >
-                      <feature.icon sx={{ color: '#6B1D2A', fontSize: 26 }} />
+                      <feature.icon sx={{ color: '#0A3B24', fontSize: 26 }} />
                     </Box>
                     <Typography
                       variant="h6"
@@ -146,7 +146,7 @@ export default function HomePage() {
             sx={{
               my: { xs: 6, md: 8 },
               p: { xs: 5, md: 7 },
-              bgcolor: '#1A0A0E',
+              bgcolor: '#05100B',
               textAlign: 'center',
               position: 'relative',
               overflow: 'hidden',
