@@ -1,16 +1,20 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Link, Divider, IconButton } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Added localization support hook
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="footer"
       sx={{
-        background: 'radial-gradient(ellipse at bottom, #082015 0%, #05100B 100%)',
+        // RECALIBRATED LUXURY EMERALD PALETTE BACKDROP
+        background: 'radial-gradient(circle at bottom, #123322 0%, #0A1E14 100%)',
         color: '#FFF8F0',
         pt: { xs: 8, md: 12 },
         pb: 4,
@@ -18,7 +22,7 @@ export default function Footer() {
         overflow: 'hidden'
       }}
     >
-      {/* Subtle top border */}
+      {/* Dynamic top gold boundary line accent */}
       <Box
         sx={{
           position: 'absolute',
@@ -26,21 +30,22 @@ export default function Footer() {
           left: 0,
           right: 0,
           height: 2,
-          background: 'linear-gradient(90deg, transparent, #C9A96E, transparent)',
+          background: 'linear-gradient(90deg, transparent, #D4B26F, transparent)',
           opacity: 0.3
         }}
       />
 
       <Container maxWidth="xl">
         <Grid container spacing={{ xs: 5, md: 6 }}>
-          {/* Brand */}
+          
+          {/* Brand Column Layout Wrapper */}
           <Grid item xs={12} md={4}>
             <Typography
               variant="h4"
               sx={{
                 fontFamily: '"Playfair Display", serif',
                 fontWeight: 600,
-                color: '#C9A96E',
+                color: '#D4B26F',
                 mb: 0.5,
                 fontSize: { xs: '1.6rem', md: '1.8rem' },
                 lineHeight: 1.2
@@ -51,7 +56,7 @@ export default function Footer() {
             <Typography
               variant="caption"
               sx={{
-                color: 'rgba(212,165,116,0.6)',
+                color: 'rgba(212,178,111,0.6)',
                 mb: 2.5,
                 display: 'block',
                 letterSpacing: '0.2em',
@@ -59,7 +64,7 @@ export default function Footer() {
                 fontWeight: 300
               }}
             >
-              EST. 1998 · LUXURY ETHNIC WEAR MANUFACTURING
+              {t('footerEst', 'EST. 1998 · LUXURY ETHNIC WEAR MANUFACTURING')}
             </Typography>
             <Typography
               variant="body2"
@@ -71,9 +76,7 @@ export default function Footer() {
                 mb: 3
               }}
             >
-              For over two decades, Rajshree Fashion has been crafting exceptional suits for
-              discerning women. Each piece is a testament to our heritage of precision
-              craftsmanship, using only the finest fabrics sourced from around the world.
+              {t('footerDescription', "For over two decades, Rajshree Fashion has been crafting exceptional suits for discerning women. Each piece is a testament to our heritage of precision craftsmanship, using only the finest fabrics sourced from around the world.")}
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               {[
@@ -85,15 +88,15 @@ export default function Footer() {
                   key={i}
                   aria-label={label}
                   sx={{
-                    color: 'rgba(212,165,116,0.5)',
-                    border: '1px solid rgba(212,165,116,0.15)',
+                    color: 'rgba(212,178,111,0.5)',
+                    border: '1px solid rgba(212,178,111,0.15)',
                     borderRadius: '8px',
                     p: 1.5,
                     transition: 'all 0.3s',
                     '&:hover': {
-                      bgcolor: 'rgba(212,165,116,0.1)',
-                      color: '#C9A96E',
-                      borderColor: 'rgba(201,169,110,0.3)',
+                      bgcolor: 'rgba(212,178,111,0.1)',
+                      color: '#D4B26F',
+                      borderColor: 'rgba(212,178,111,0.3)',
                       transform: 'translateY(-2px)'
                     }
                   }}
@@ -104,12 +107,12 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          {/* Quick Links */}
+          {/* Core App Navigation Section */}
           <Grid item xs={6} md={2}>
             <Typography
               variant="caption"
               sx={{
-                color: '#C9A96E',
+                color: '#D4B26F',
                 mb: 2.5,
                 display: 'block',
                 letterSpacing: '0.2em',
@@ -117,13 +120,11 @@ export default function Footer() {
                 fontWeight: 500
               }}
             >
-              Navigate
+              {t('footerNavigate', 'Navigate')}
             </Typography>
             {[
-              { label: 'Home', path: '/' },
-              { label: 'Shop', path: '/shop' },
-              { label: 'Collections', path: '/shop' },
-              { label: 'About', path: '/' }
+              { label: t('navHome', 'Home'), path: '/' },
+              { label: t('navShop', 'Shop'), path: '/shop' }
             ].map((link) => (
               <Link
                 key={link.label}
@@ -138,7 +139,7 @@ export default function Footer() {
                   letterSpacing: '0.05em',
                   mb: 1.5,
                   transition: 'all 0.3s',
-                  '&:hover': { color: '#C9A96E', paddingLeft: '4px' }
+                  '&:hover': { color: '#D4B26F', paddingLeft: '4px' }
                 }}
               >
                 {link.label}
@@ -146,12 +147,12 @@ export default function Footer() {
             ))}
           </Grid>
 
-          {/* Collections */}
+          {/* Collections Filter Anchors */}
           <Grid item xs={6} md={2}>
             <Typography
               variant="caption"
               sx={{
-                color: '#C9A96E',
+                color: '#D4B26F',
                 mb: 2.5,
                 display: 'block',
                 letterSpacing: '0.2em',
@@ -159,7 +160,7 @@ export default function Footer() {
                 fontWeight: 500
               }}
             >
-              Collections
+              {t('footerCollections', 'Collections')}
             </Typography>
             {['Signature Line', 'Festive Collection', 'Summer Essentials', 'Everyday Elegance', 'Premium Collection'].map((col) => (
               <Link
@@ -175,7 +176,7 @@ export default function Footer() {
                   letterSpacing: '0.05em',
                   mb: 1.5,
                   transition: 'all 0.3s',
-                  '&:hover': { color: '#C9A96E', paddingLeft: '4px' }
+                  '&:hover': { color: '#D4B26F', paddingLeft: '4px' }
                 }}
               >
                 {col}
@@ -183,12 +184,12 @@ export default function Footer() {
             ))}
           </Grid>
 
-          {/* Contact */}
+          {/* Contact & Map Box Column Container */}
           <Grid item xs={12} md={4}>
             <Typography
               variant="caption"
               sx={{
-                color: '#C9A96E',
+                color: '#D4B26F',
                 mb: 2.5,
                 display: 'block',
                 letterSpacing: '0.2em',
@@ -196,28 +197,29 @@ export default function Footer() {
                 fontWeight: 500
               }}
             >
-              Visit Our Atelier
+              {t('footerVisit', 'Visit Our Atelier')}
             </Typography>
 
-            <Box sx={{ width: '100%', height: 180, borderRadius: '8px', overflow: 'hidden' }}>
+            <Box sx={{ width: '100%', height: 180, borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(212,178,111,0.2)' }}>
+              {/* FIXED EXPLICIT IFRAME MAP EMBED SOURCE PIPELINE */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120638.06452273418!2d72.77531985950005!3d19.11364501257497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.1059501962122!2d72.87415657504856!3d21.18794968050142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fca0eb4c349%3A0x48cf9ca4b66c1cff!2sRajshree%20Fashion!5e0!3m2!1sen!2sin!4v1782727816764!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen="" 
                 loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Rajshree Fashion Location"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Rajshree Fashion Maps Terminal"
               />
             </Box>
           </Grid>
         </Grid>
 
-        <Divider sx={{ borderColor: 'rgba(212,165,116,0.12)', my: { xs: 4, md: 5 } }} />
+        <Divider sx={{ borderColor: 'rgba(212,178,111,0.12)', my: { xs: 4, md: 5 } }} />
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 2 }}>
-          {/* Copyright - Left */}
+          {/* Copyright Metadata */}
           <Box sx={{ flex: 1, display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
             <Typography
               variant="caption"
@@ -227,7 +229,7 @@ export default function Footer() {
             </Typography>
           </Box>
           
-          {/* Developer Credit - Center */}
+          {/* Verified Developer Studio Attribution */}
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <Typography
               variant="caption"
@@ -239,7 +241,7 @@ export default function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 sx={{ 
-                  color: '#C9A96E', 
+                  color: '#D4B26F', 
                   textDecoration: 'none',
                   '&:hover': { textDecoration: 'underline' }
                 }}
@@ -249,7 +251,7 @@ export default function Footer() {
             </Typography>
           </Box>
 
-          {/* Secret Admin - Right */}
+          {/* Secure Admin Endpoint Tunnel Button overlay */}
           <Box sx={{ flex: 1, display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
             <Link 
               component={RouterLink} 
