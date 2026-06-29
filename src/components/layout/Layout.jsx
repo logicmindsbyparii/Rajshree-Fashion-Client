@@ -25,7 +25,7 @@ export default function Layout({ children }) {
       <Fab 
         color="success" 
         aria-label="whatsapp"
-        onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+        onClick={() => window.open('https://wa.me/919825184531', '_blank')}
         sx={{
           position: 'fixed',
           bottom: { xs: 24, md: 40 },
