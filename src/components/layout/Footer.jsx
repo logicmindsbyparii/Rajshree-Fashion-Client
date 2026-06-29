@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Link, Divider, IconButton } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // Added localization support hook
+import { useTranslation } from 'react-i18next';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import PinterestIcon from '@mui/icons-material/Pinterest';
+import YouTubeIcon from '@mui/icons-material/YouTube'; // Imported YouTube Icon
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -13,7 +13,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        // RECALIBRATED LUXURY EMERALD PALETTE BACKDROP
+        // PREMIUM DEEP EMERALD GREEN PALETTE
         background: 'radial-gradient(circle at bottom, #123322 0%, #0A1E14 100%)',
         color: '#FFF8F0',
         pt: { xs: 8, md: 12 },
@@ -22,7 +22,7 @@ export default function Footer() {
         overflow: 'hidden'
       }}
     >
-      {/* Dynamic top gold boundary line accent */}
+      {/* Top Gold Shimmer Border Accent Line */}
       <Box
         sx={{
           position: 'absolute',
@@ -38,7 +38,7 @@ export default function Footer() {
       <Container maxWidth="xl">
         <Grid container spacing={{ xs: 5, md: 6 }}>
           
-          {/* Brand Column Layout Wrapper */}
+          {/* Column 1: Brand & Social Handles */}
           <Grid item xs={12} md={4}>
             <Typography
               variant="h4"
@@ -78,26 +78,31 @@ export default function Footer() {
             >
               {t('footerDescription', "For over two decades, Rajshree Fashion has been crafting exceptional suits for discerning women. Each piece is a testament to our heritage of precision craftsmanship, using only the finest fabrics sourced from around the world.")}
             </Typography>
-            <Box sx={{ display: 'flex', gap: 1 }}>
+            
+            {/* Social Media Link Connectors with Added YouTube Target */}
+            <Box sx={{ display: 'flex', gap: 1.5 }}>
               {[
-                { icon: InstagramIcon, label: 'Instagram' },
-                { icon: FacebookIcon, label: 'Facebook' },
-                { icon: PinterestIcon, label: 'Pinterest' }
-              ].map(({ icon: Icon, label }, i) => (
+                { icon: InstagramIcon, label: 'Instagram', url: 'https://instagram.com/rajshree_fashion' },
+                { icon: FacebookIcon, label: 'Facebook', url: 'https://facebook.com/rajshree_fashion' },
+                { icon: YouTubeIcon, label: 'YouTube', url: 'https://www.youtube.com/@rajshreefashion' }
+              ].map(({ icon: Icon, label, url }, i) => (
                 <IconButton
                   key={i}
                   aria-label={label}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     color: 'rgba(212,178,111,0.5)',
                     border: '1px solid rgba(212,178,111,0.15)',
                     borderRadius: '8px',
                     p: 1.5,
-                    transition: 'all 0.3s',
+                    transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                     '&:hover': {
                       bgcolor: 'rgba(212,178,111,0.1)',
                       color: '#D4B26F',
-                      borderColor: 'rgba(212,178,111,0.3)',
-                      transform: 'translateY(-2px)'
+                      borderColor: 'rgba(212,178,111,0.4)',
+                      transform: 'translateY(-3px)'
                     }
                   }}
                 >
@@ -107,7 +112,7 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          {/* Core App Navigation Section */}
+          {/* Column 2: Navigation Links */}
           <Grid item xs={6} md={2}>
             <Typography
               variant="caption"
@@ -147,7 +152,7 @@ export default function Footer() {
             ))}
           </Grid>
 
-          {/* Collections Filter Anchors */}
+          {/* Column 3: Collections Category Links */}
           <Grid item xs={6} md={2}>
             <Typography
               variant="caption"
@@ -184,7 +189,7 @@ export default function Footer() {
             ))}
           </Grid>
 
-          {/* Contact & Map Box Column Container */}
+          {/* Column 4: Maps Anchor Terminal */}
           <Grid item xs={12} md={4}>
             <Typography
               variant="caption"
@@ -201,7 +206,6 @@ export default function Footer() {
             </Typography>
 
             <Box sx={{ width: '100%', height: 180, borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(212,178,111,0.2)' }}>
-              {/* FIXED EXPLICIT IFRAME MAP EMBED SOURCE PIPELINE */}
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.1059501962122!2d72.87415657504856!3d21.18794968050142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fca0eb4c349%3A0x48cf9ca4b66c1cff!2sRajshree%20Fashion!5e0!3m2!1sen!2sin!4v1782727816764!5m2!1sen!2sin" 
                 width="100%" 
@@ -219,7 +223,7 @@ export default function Footer() {
         <Divider sx={{ borderColor: 'rgba(212,178,111,0.12)', my: { xs: 4, md: 5 } }} />
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 2 }}>
-          {/* Copyright Metadata */}
+          {/* Copyright Section */}
           <Box sx={{ flex: 1, display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
             <Typography
               variant="caption"
@@ -229,7 +233,7 @@ export default function Footer() {
             </Typography>
           </Box>
           
-          {/* Verified Developer Studio Attribution */}
+          {/* Logic Minds Credits */}
           <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <Typography
               variant="caption"
@@ -251,7 +255,7 @@ export default function Footer() {
             </Typography>
           </Box>
 
-          {/* Secure Admin Endpoint Tunnel Button overlay */}
+          {/* Secure Admin Route Access Gate */}
           <Box sx={{ flex: 1, display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
             <Link 
               component={RouterLink} 
