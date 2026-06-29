@@ -386,7 +386,7 @@ export default function ProductDetailModal({ product, open, onClose }) {
                 onClick={() => {
                   if (inStock) {
                     const message = encodeURIComponent(`Hi, I would like to order: ${product.title} (ID: #${product.id})`);
-                    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+                    window.open(`https://wa.me/919825184531?text=${message}`, '_blank');
                     onClose();
                   }
                 }}
